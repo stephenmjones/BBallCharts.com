@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>BBallcharts.com - Graphs of NBA Player Stats</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="scripts/font-awesome-4.4.0/css/font-awesome.min.css">  
+  <link href="http://fonts.googleapis.com/css?family=Oswald:700%7COpen+Sans:400" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  
+  <header class="container header">
+    <div class="row">
+      <div class="grid-100 grid-12-s grid-12-m">
+        <img src="images/ballicon.png" class="headerlogo" alt="Player photo">
+        <h1 class="headerlogotype">BBallCharts.com</h1>
+      </div>
+    </div>
+  </header>
+  
+  <div class="container playerwindow">
+    <div class="row">
+      
+      <div class="grid-100 grid-6-s grid-3-m">
+        <div class="playerselectcontainer">
+          <div class="playerselectupper">
+            <h2 class='playerselectheader'>Add Player...</h2>
+	          <button class="pspopen">
+	            <i class="fa fa-plus"></i>
+						</button>
+          </div>
+        </div>
+			</div>        
+      
+      <div class="grid-100 grid-6-s grid-3-m">
+        <div class="playerselectcontainer">
+          <div class="playerselectupper">
+            <h2 class='playerselectheader'>Add Player...</h2>
+	          <button class="pspopen">
+	            <i class="fa fa-plus"></i>
+						</button>
+          </div>
+        </div>
+			</div>        
+      
+      <div class="grid-100 grid-6-s grid-3-m">
+        <div class="playerselectcontainer">
+          <div class="playerselectupper">
+            <h2 class='playerselectheader'>Add Player...</h2>
+	          <button class="pspopen">
+	            <i class="fa fa-plus"></i>
+						</button>
+          </div>
+        </div>
+			</div>        
+      
+      <div class="grid-100 grid-6-s grid-3-m">
+        <div class="playerselectcontainer">
+          <div class="playerselectupper">
+            <h2 class='playerselectheader'>Add Player...</h2>
+	          <button class="pspopen">
+	            <i class="fa fa-plus"></i>
+						</button>
+          </div>
+        </div>
+			</div>        
+    
+    </div>
+  </div>
+  
+  <div class="container graphwindow">
+    <div class="row">
+      <div class="grid-100 grid-12-s grid-12-m">
+        <div class="graphcontainer">
+	        <div class="graphupper">
+            <select class='timeselector'>
+              <option value='31536000000'>2014-15 Season</option>
+              <option value='5270400000'>Last 60 Days</option>
+              <option value='2678400000'>Last 30 Days</option>
+              <option value='1296000000'>Last 14 Days</option>
+            </select>
+	          <button class="calendarbutton">
+	            <i class="fa fa-calendar"></i>
+						</button>
+          </div>
+          <div class="graphlower"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container pspbackground">
+    <div class="row">
+      <div class="grid-100 grid-12-s grid-12-m">
+        <div class="pspcontainer">
+        	<div class="pspupper">
+	          <i class="fa fa-search"></i>
+						<h2 class="pspheader">Seach Players...</h2>
+	          <button class="pspclose">
+	            <i class="fa fa-close"></i>
+						</button>
+					</div>
+          <div class="psplower">
+            <div id="prefetch">
+              <input class="typeahead pspinput" type="text" placeholder="Start typing a name...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+	<script type="text/javascript" src="scripts/jquery-1.11.1/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="scripts/flot/jquery.flot.min.js"></script>
+  <script type="text/javascript" src="scripts/flot/jquery.flot.time.min.js"></script>
+  <script type="text/javascript" src="scripts/typeahead.js/typeahead.bundle.min.js"></script>
+  <script type="text/javascript" src="scripts/javascript.js"></script>
+
+</body>
+
+</html>

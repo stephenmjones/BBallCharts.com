@@ -1,0 +1,467 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CSS Reset */
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Global Styles */
+
+html {height: 100%;}
+	
+body {
+	height: 100%;
+	background-color:#d5d5d5;
+	}
+	
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header Styles */
+
+.header {
+	background-color: #2d2d2d;
+	margin-bottom: .25rem;
+}
+	
+.headerlogo {
+	position: relative;
+	top: 6px;
+	height: 28px;
+	float:left;
+	background-color:none;
+}
+ 
+.headerlogotype {
+	position: relative;
+	left: 4px;
+	float: left;
+	font: normal 700 24px/40px Oswald;
+	color: #eee;
+	float: left;
+}
+	
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Player Window Styles */
+
+.playerselectcontainer {
+	position: relative;
+	padding: 4px;
+	border-radius: 4px;
+}
+
+.playerwindow > div > div:nth-child(1) > div {background-color: #ef2c3e; border: 1px solid rgba(139, 14, 27, .9);}
+.playerwindow > div > div:nth-child(1) > div > div:nth-child(2) {border: 1px solid rgba(139, 14, 27, .9);}
+
+.playerwindow > div > div:nth-child(2) > div {background-color: #39b54a; border: 1px solid rgba(13, 108, 41, 1);}
+.playerwindow > div > div:nth-child(2) > div > div:nth-child(2) {border: 1px solid rgba(13, 108, 41, 1);}
+
+.playerwindow > div > div:nth-child(3) > div {background-color: #0076a3; border: 1px solid rgba(0, 70, 100, 1);}
+.playerwindow > div > div:nth-child(3) > div > div:nth-child(2) {border: 1px solid rgba(0, 70, 100, 1);}
+
+.playerwindow > div > div:nth-child(4) > div {background-color: #713991; border: 1px solid rgba(66, 20, 87, 1);}
+.playerwindow > div > div:nth-child(4) > div > div:nth-child(2) {border: 1px solid rgba(66, 20, 87, 1);}
+
+.playerselectupper {height: 25px;}	
+
+	.playerselectupper > i:nth-child(2) {
+		right:2px;
+		top: 1px;
+		float:right;
+	}
+
+.pspopen {
+	position: relative;
+	height: 25px;
+	width: 25px;
+	line-height:25px;
+	font-size: 25px;
+	right: 1px;
+	top: 1px;
+	float:right;
+	color:#eee;
+	background-color: rgba(0,0,0,0);
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.revert {
+	position: relative;
+	height: 25px;
+	width:25px;
+	line-height:25px;
+	font-size: 25px;
+	right: 2px;
+	top: 0px;
+	float:right;
+	color:#eee;
+	background-color: rgba(0,0,0,0);
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.playerselectheader {
+	position: relative;
+	font: normal 700 22px/25px Oswald;
+	color: #eee;
+	float:left;
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.playerimg {
+	position: absolute;
+	height: 56px;
+	right: 20px;
+	top:1px;
+	z-index:3;
+	-webkit-filter: drop-shadow(3px 0px 0px rgba(0,0,0,0.2));
+	filter: drop-shadow(3px 0px 0px rgba(0,0,0,0.2));
+}
+
+.playerselectlower {
+	height: 25px;
+	border-radius: 4px;
+	background-color: #eeeeee;
+	margin: 4px 0 0 0;
+}	
+
+	.playerselectlower > i:nth-child(1) {
+		position:relative;
+		height: 20px;
+		line-height:23px;
+		font-size: 20px;
+		top: 2px;
+		left: 5px;
+		font-size:12px;
+	}
+	
+	.playerselectlower > i:nth-child(3) {
+		position:relative;
+		height: 20px;
+		line-height:23px;
+		font-size: 20px;
+		top: 1px;
+		left: -20px;
+		font-size:12px;
+	}
+
+.statselector {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	position:relative;
+	height: 21px;
+	left: 7px;
+	width: 110px;
+	top: 1px;
+	background-color: rgba(0,0,0,0);
+	font: normal 400 12px/21px Open Sans;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Player Select Popup Styles */
+
+.pspbackground {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .85);
+	z-index: 10;
+	display:none;
+	padding-top: 25px;
+}
+	
+.pspcontainer {
+	position: relative;
+	margin: 20px 0 0 0;
+	padding: 4px;
+	border-radius: 4px;
+	background-color: #dddddd;
+	border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.pspupper {height: 25px;}	
+	
+	.pspupper > i{
+		position: relative;
+		height: 25px;
+		line-height:25px;
+		font-size: 25px;
+		color:#2d2d2d;
+		float:left;
+	}
+		
+	.pspupper > i:nth-child(1) {font-size: 22px;}	
+		
+	.pspupper > i:nth-child(3) {
+		right:2px;
+		top: 1px;
+		float:right;
+	}	
+	
+.pspheader {
+	position: relative;
+	font: normal 700 22px/25px Oswald;
+	color: #2d2d2d;
+	float:left;
+	left: 4px;
+}
+
+.pspicon {
+	position: absolute;
+	left:4px;
+	top: 6px;
+	line-height: 20px;
+	font-size: 16px;
+	font-weight: 700;
+  background-color: rgba(0,0,0,0);
+	border-radius: 4px;
+	color: #2d2d2d;
+}	
+
+.pspclose {
+	position: relative;
+	height: 25px;
+	width:25px;
+	line-height:25px;
+	font-size: 25px;
+	right: 2px;
+	top: 0px;
+	float:right;
+	color:#2d2d2d;
+	background-color: rgba(0,0,0,0);
+}
+
+.psplower {
+	height: 25px;
+	border-radius: 4px;
+	background-color: #eeeeee;
+	margin: 4px 0 0 0;
+	border: 1px solid rgba(0, 0, 0, .6);
+}	
+	
+.pspinput {
+	border-radius: 4px;
+	width:100%;
+	height: 23px;
+	padding: 4px;
+	font: normal 400 12px/23px Open Sans;
+}
+	
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Graph Styles */
+
+.graphcontainer {
+	position: relative;
+	padding: 4px;
+	border-radius: 4px;
+	background-color: #2d2d2d;
+	border: 1px solid rgba(0, 0, 0, 1);
+}
+	
+.graphupper {height:25px;}	
+	
+.timeselector {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	position:absolute;
+	width: 100%;
+	position: relative;
+	font: normal 700 22px/25px Oswald;
+	color: #eee;
+	float:left;
+	background-color: rgba(0,0,0,0);
+	padding: 0px;
+	z-index:7;
+}	
+	
+	.timeselector > option {
+		color: #2d2d2d;
+		font: normal 400 12px Open Sans;
+	}
+	
+.calendarbutton {
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	line-height:25px;
+	font-size: 25px;
+	right: 5px;
+	top: 4px;
+	float:right;
+	color:#eee;
+	z-index:6;
+	background-color: rgba(0,0,0,0);
+}
+
+.graphlower {
+	position: relative;
+	height: 265px;
+	border-radius: 4px;
+	background-color: #eeeeee;
+	margin: 4px 0 0 0;
+	border: 1px solid rgba(0, 0, 0, 1);
+}
+	
+.tickLabel {
+	font-family: 'Lato', sans-serif !important;
+	font-size: 10px;
+	font-weight: 600;
+	color: #000;
+	padding: 2px;
+}
+
+.tooltip {
+	box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.8);
+	z-index: 15;
+}
+	
+.tooltip_left {
+	height: 100%;
+	float: left;
+  padding: 2px 4px 2px 2px;
+}
+	
+	.tooltip_left > p:nth-child(1) {
+		font: normal 700 18px/18px Oswald;
+		text-align: center;
+		color: #FFF;
+		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.55);
+	}	
+		
+	.tooltip_left > p:nth-child(2) {
+		text-align: center;
+		font: normal 700 12px/16px Oswald;
+		color: #FFF;
+		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.55);
+	}	
+	
+.tooltip_right {
+	height: 100%;
+	background-color: white;
+	border-radius: 6px;
+	float: left;
+	padding: 4px;
+	text-align: center;
+	color: #000;
+	font: normal 400 12px/15px Open Sans;
+}
+	
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Grid System */
+
+.container {padding: 0 .25rem 0 .25rem;}
+
+	.container:before, .container:after {
+		display: table;
+		content: ' ';
+	}
+	
+	.container:after {clear: both;}
+
+
+.row {
+  width: 100%;
+  max-width:75rem;
+  margin:0 auto;
+}
+	
+	.row .row {
+		margin-left: -0.65rem;
+		margin-right: -0.65rem;
+		width: auto;
+	}
+		
+	.row:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+[class*='grid-'] {
+  float: left;
+  position: relative;
+  padding: 0.25rem;
+  width:100%;
+}
+  
+@media only screen {
+  .grid-1-s { width: 8.3333333333333%;}
+  .grid-2-s { width: 16.666666666667%;}
+  .grid-3-s { width: 25%;}
+  .grid-4-s { width: 33.333333333333%;}
+  .grid-5-s { width: 41.666666666667%;}
+  .grid-6-s { width: 50%;}
+  .grid-7-s { width: 58.333333333333%;}
+  .grid-8-s { width: 66.666666666667%;}
+  .grid-9-s { width: 75%;}
+  .grid-10-s { width: 83.333333333333%;}
+  .grid-11-s { width: 91.666666666667%;}
+  .grid-12-s { width: 100%;}
+}
+	
+@media only screen and (min-width: 65rem) {
+  .grid-1-m { width: 8.3333333333333%;}
+  .grid-2-m { width: 16.666666666667%;}
+  .grid-3-m { width: 25%;}
+  .grid-4-m { width: 33.333333333333%;}
+  .grid-5-m { width: 41.666666666667%;}
+  .grid-6-m { width: 50%;}
+  .grid-7-m { width: 58.333333333333%;}
+  .grid-8-m { width: 66.666666666667%;}
+  .grid-9-m { width: 75%;}
+  .grid-10-m { width: 83.333333333333%;}
+  .grid-11-m { width: 91.666666666667%;}
+  .grid-12-m { width: 100%;}
+}
+
+@media only screen and (max-width: 33.75rem){
+  .grid-100 { width:100%;}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Autocomplete Styles */
+
+.tt-query {
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999;
+	font: normal 400 12px Open Sans;
+}
+
+.twitter-typeahead {width: 100%;}
+
+.tt-menu {
+	width: 100%;
+	margin-top: 4px;
+	padding: 4px 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+	font: normal 400 12px/24px Open Sans;
+}
+
+	.tt-suggestion.tt-cursor {
+		color: #fff;
+		background-color: #333;
+	}
+	
+	.tt-suggestion:nth-child(even) {background-color: #eee;}
+	
+	.tt-suggestion.tt-cursor:nth-child(even) {
+		color: #fff;
+		background-color: #333;
+	}
+	
+	.tt-suggestion p {margin: 0;}
