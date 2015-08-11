@@ -352,8 +352,15 @@ function plotData()	{
 		datap.push (window[firstObjName][selectedStat]);
 	}
 			
-	plot = $.plot($('.graphlower'), datap, options);
-
+	console.log($('.playerwindow').children('div').children('div:nth-child(1)').children('div').children('div').children('.revert').length);
+	
+	if ($('.playerwindow').children('div').children('div:nth-child(1)').children('div').children('div').children('.revert').length == 0 && $('.playerwindow').children('div').children('div:nth-child(2)').children('div').children('div').children('.revert').length == 0 && $('.playerwindow').children('div').children('div:nth-child(3)').children('div').children('div').children('.revert').length == 0 && $('.playerwindow').children('div').children('div:nth-child(4)').children('div').children('div').children('.revert').length == 0) {
+		plot = $.plot($('.graphlower'), [[]], options);			
+	}
+	else {
+		plot = $.plot($('.graphlower'), datap, options);
+	}
+	
 	$(".graphlower").bind("plothover", function (event, pos, item) {
 		$("#x").text(pos.x.toFixed(2));
 		$("#y").text(pos.y.toFixed(2));
@@ -398,7 +405,11 @@ $(document).on("change", '.timeselector', function()	{
 	plotData();
 });
 
-$( window ).resize(function() {
+$(document).ready(function() {
+	plotData();
+});
+
+$(window).resize(function() {
 	plotData();
 });
 
