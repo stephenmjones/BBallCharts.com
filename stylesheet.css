@@ -37,7 +37,6 @@ i {cursor: pointer;}
 	background-color:none;
 	-webkit-filter: drop-shadow(2px 2px 0px rgba(0,0,0,.9));
 	filter: drop-shadow(2px 2px 0px rgba(0,0,0,.9));
-
 }
  
 .headerlogotype {
@@ -427,7 +426,7 @@ i {cursor: pointer;}
 }
 
 @media only screen and (max-width: 33.75rem){
-  .grid-100 { width:100%;}
+  .grid-100 {width:100%;}
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Media Query Sizing */
