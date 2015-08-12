@@ -38,8 +38,8 @@ function closePlayerSelect(obj) {
 function changePlayerCard(obj) {
 	console.log("~~~~~~~~> changePlayerCard(); Triggered");
 	$( ".pspbackground" ).toggle();
-	$(".selected").animate({height: "64px"}, 800, function() {});
-	$(".selected").html("<div class='playerselectupper'><h2 class='playerselectheader'>"+obj+"</h2><button class='revert'><i class='fa fa-close'></i></button><img src='images/2014_15_Headshots/"+obj.replace(/\s+/g, '_')+".png' class='playerimg' onerror=this.src='/images/2014_15_Headshots/No_Photo.png' alt='Player photo'></div><div class='playerselectlower'><i class='fa fa-line-chart fa-fw'></i><select class='statselector'><option value='fantasy'>Fantasy Points</option><option value='minutes'>Minutes</option><option value='points'>Points</option><option value='fgm'>FGM</option><option value='fga'>FGA</option><option value='tpm'>3PM</option><option value='tpa'>3PA</option><option value='ftm'>FTM</option><option value='fta'>FTA</option><option value='assists'>Assists</option><option value='rebounds'>Rebounds</option><option value='steals'>Steals</option><option value='blocks'>Blocks</option><option value='to'>Turnovers</option></select><i class='fa fa-chevron-down fa-fw'></i></div>");
+	$(".selected").html("<div class='playerselectupper'><h2 class='playerselectheader'>"+obj+"</h2><button class='revert'><i class='fa fa-close'></i></button><img src='images/2014_15_Headshots/"+obj.replace(/\s+/g, '_')+".png' class='playerimg' onerror=this.src='/images/2014_15_Headshots/No_Photo.png' alt='Player photo'></div><div class='playerselectlower'><i class='fa fa-line-chart fa-fw'></i><select class='statselector'><option value='fantasy'>Fantasy Points</option><option value='minutes'>Minutes</option><option value='points'>Points</option><option value='assists'>Assists</option><option value='rebounds'>Rebounds</option><option value='steals'>Steals</option><option value='blocks'>Blocks</option><option value='to'>Turnovers</option><option value='fgm'>FG Made</option><option value='fga'>FG Atempted</option><option value='tpm'>3PT Made</option><option value='tpa'>3PT Attempted</option><option value='ftm'>FT Made</option><option value='fta'>FT Attempted</option></select><i class='fa fa-chevron-down fa-fw'></i></div>");
+	$(".selected").children(".playerselectlower").css('display', 'block');
 	$(".pspinput").blur();
 	$(".selected").toggleClass("selected")
 	$('.typeahead').typeahead('val', '');
@@ -48,8 +48,7 @@ function changePlayerCard(obj) {
 
 function revertPlayerCard(obj) {
 	console.log("~~~~~~~~> revertPlayerCard(); Triggered");
-	$(obj).parent().parent().animate({height: "35px"}, 600, function() {});
-	$(obj).parent().parent().html("<div class='playerselectupper'><h2 class='playerselectheader'>Add Player...</h2><button class='pspopen'><i class='fa fa-plus'></i></button></div>");
+	$(obj).parent().parent().html("<div class='playerselectupper'><h2 class='playerselectheader'>Add Player...</h2><button class='pspopen'><i class='fa fa-plus'></i></button></div><div class='playerselectlower'></div>");
 	console.log("~~~~~~~~> revertPlayerCard(); Finished");
 };
 
@@ -272,7 +271,8 @@ function plotData()	{
 			tickDecimals: 0,
 		},
 		yaxis: {
-			tickDecimals: 0
+			tickDecimals: 0,
+			min: 0,
 		},
 		selection: {
 			mode: "x"
@@ -284,6 +284,12 @@ function plotData()	{
 			color: '#3a3a3a',
 			markings: [{color: '#ddd', lineWidth: 2, yaxis: {from: 0, to: -20}},{color: '#fff', lineWidth: 2, yaxis: {from: 0, to: 200}}],
 			minBorderMargin: 5,
+			margin: {
+				top: 20,
+				left: 4,
+				bottom: 0,
+				right: 20,
+			},
 		},
 		legend: {
 			show: false
@@ -291,7 +297,9 @@ function plotData()	{
 	};		
 
 	var datap = [];
-		
+	
+	
+	
 	if ($('.playerwindow').children('div').children('div:nth-child(4)').children('div').children('div').children('.revert').length != 0)	{
 		var fourthObjName = $('.playerwindow').children('div').children('div:nth-child(4)').children('div').children('div').children('h2').text().replace(/\s+/g, '')+'Obj';
 		var selectedStat = $('.playerwindow').children('div').children('div:nth-child(4)').children('div').children('div').children('.statselector').val();
@@ -299,11 +307,25 @@ function plotData()	{
 		window[fourthObjName][selectedStat].data = window[fourthObjName][selectedStat].data2.slice(0);
 		window[fourthObjName][selectedStat].label = window[fourthObjName][selectedStat].label2.slice(0);
 		for (i = window[fourthObjName][selectedStat].data.length - 1; i >= 0; i--) {
-			if (window[fourthObjName][selectedStat].data[i][0] <= Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - $('.timeselector').val())	{ 
+			//use this duing the season
+			//if (window[fourthObjName][selectedStat].data[i][0] <= Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - $('.timeselector').val())	{ 
+			if (window[fourthObjName][selectedStat].data[i][0] <= Date.UTC(2015, 3, 15) - $('.timeselector').val())	{ 
 				window[fourthObjName][selectedStat].data.splice(i, 1);
 				window[fourthObjName][selectedStat].label.splice(i, 1);
 			}
+			else if (window[fourthObjName][selectedStat].data[i][0] >= Date.UTC(2015, 3, 15)) { 
+				window[fourthObjName][selectedStat].data.splice(i, 1);
+				window[fourthObjName][selectedStat].label.splice(i, 1);
+			}
+			
 		}
+
+		for (i = window[fourthObjName][selectedStat].data.length - 1; i >= 0; i--) {
+			if (window[fourthObjName][selectedStat].data[i][1] < 0) {
+				delete options.yaxis["min"];
+			}
+		}
+
 		datap.push (window[fourthObjName][selectedStat]);
 	}
 		
@@ -314,11 +336,23 @@ function plotData()	{
 		window[thirdObjName][selectedStat].data = window[thirdObjName][selectedStat].data2.slice(0);
 		window[thirdObjName][selectedStat].label = window[thirdObjName][selectedStat].label2.slice(0);
 		for (i = window[thirdObjName][selectedStat].data.length - 1; i >= 0; i--) {
-			if (window[thirdObjName][selectedStat].data[i][0] <= Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - $('.timeselector').val())	{ 
+			if (window[thirdObjName][selectedStat].data[i][0] <= Date.UTC(2015, 3, 15) - $('.timeselector').val())	{ 
+				window[thirdObjName][selectedStat].data.splice(i, 1);
+				window[thirdObjName][selectedStat].label.splice(i, 1);
+			}
+			else if (window[thirdObjName][selectedStat].data[i][0] >= Date.UTC(2015, 3, 15)) { 
 				window[thirdObjName][selectedStat].data.splice(i, 1);
 				window[thirdObjName][selectedStat].label.splice(i, 1);
 			}
 		}
+
+		for (i = window[thirdObjName][selectedStat].data.length - 1; i >= 0; i--) {
+			if (window[thirdObjName][selectedStat].data[i][1] < 0) {
+				delete options.yaxis["min"];
+			}
+		}
+
+
 		datap.push (window[thirdObjName][selectedStat]);
 	}
 		
@@ -329,11 +363,22 @@ function plotData()	{
 		window[secondObjName][selectedStat].data = window[secondObjName][selectedStat].data2.slice(0);
 		window[secondObjName][selectedStat].label = window[secondObjName][selectedStat].label2.slice(0);
 		for (i = window[secondObjName][selectedStat].data.length - 1; i >= 0; i--) {
-			if (window[secondObjName][selectedStat].data[i][0] <= Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - $('.timeselector').val()) { 
+			if (window[secondObjName][selectedStat].data[i][0] <= Date.UTC(2015, 3, 15) - $('.timeselector').val()) { 
+				window[secondObjName][selectedStat].data.splice(i, 1);
+				window[secondObjName][selectedStat].label.splice(i, 1);
+			}
+			else if (window[secondObjName][selectedStat].data[i][0] >= Date.UTC(2015, 3, 15)) { 
 				window[secondObjName][selectedStat].data.splice(i, 1);
 				window[secondObjName][selectedStat].label.splice(i, 1);
 			}
 		}
+
+		for (i = window[secondObjName][selectedStat].data.length - 1; i >= 0; i--) {
+			if (window[secondObjName][selectedStat].data[i][1] < 0) {
+				delete options.yaxis["min"];
+			}
+		}
+
 		datap.push (window[secondObjName][selectedStat]);
 	}
 		
@@ -344,15 +389,28 @@ function plotData()	{
 		window[firstObjName][selectedStat].data = window[firstObjName][selectedStat].data2.slice(0);
 		window[firstObjName][selectedStat].label = window[firstObjName][selectedStat].label2.slice(0);
 		for (i = window[firstObjName][selectedStat].data.length - 1; i >= 0; i--) {
-			if (window[firstObjName][selectedStat].data[i][0] <= Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) - $('.timeselector').val()) { 
+			if (window[firstObjName][selectedStat].data[i][0] <= Date.UTC(2015, 3, 15) - $('.timeselector').val()) { 
+				window[firstObjName][selectedStat].data.splice(i, 1);
+				window[firstObjName][selectedStat].label.splice(i, 1);
+			}
+			else if (window[firstObjName][selectedStat].data[i][0] >= Date.UTC(2015, 3, 15)) { 
 				window[firstObjName][selectedStat].data.splice(i, 1);
 				window[firstObjName][selectedStat].label.splice(i, 1);
 			}
 		}
+
+		for (i = window[firstObjName][selectedStat].data.length - 1; i >= 0; i--) {
+			if (window[firstObjName][selectedStat].data[i][1] < 0) {
+				delete options.yaxis["min"];
+			}
+		}
+
 		datap.push (window[firstObjName][selectedStat]);
 	}
 			
-	console.log($('.playerwindow').children('div').children('div:nth-child(1)').children('div').children('div').children('.revert').length);
+	console.log(datap);
+	
+	
 	
 	if ($('.playerwindow').children('div').children('div:nth-child(1)').children('div').children('div').children('.revert').length == 0 && $('.playerwindow').children('div').children('div:nth-child(2)').children('div').children('div').children('.revert').length == 0 && $('.playerwindow').children('div').children('div:nth-child(3)').children('div').children('div').children('.revert').length == 0 && $('.playerwindow').children('div').children('div:nth-child(4)').children('div').children('div').children('.revert').length == 0) {
 		plot = $.plot($('.graphlower'), [[]], options);			
