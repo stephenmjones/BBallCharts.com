@@ -24,6 +24,7 @@ function openPlayerSelect(obj) {
 	$( ".pspbackground" ).toggle();
 	$(obj).parent().parent().toggleClass("selected")
 	$(".pspinput").focus();
+	window.scrollTo(0, 0);
 	console.log("~~~~~~~~> openPlayerSelect(); Finished");
 };
 	
