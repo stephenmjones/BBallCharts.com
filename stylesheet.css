@@ -25,7 +25,7 @@ i {cursor: pointer;}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header Styles */
 
 .header {
-	background-color: #2d2d2d;
+	background-color: #383838;
 	margin-bottom: .25rem;
 }
 	
@@ -35,18 +35,18 @@ i {cursor: pointer;}
 	height: 28px;
 	float:left;
 	background-color:none;
-	-webkit-filter: drop-shadow(2px 2px 0px rgba(0,0,0,.9));
-	filter: drop-shadow(2px 2px 0px rgba(0,0,0,.9));
+	-webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
 }
  
 .headerlogotype {
 	position: relative;
 	left: 4px;
 	float: left;
-	font: normal 700 24px/40px Oswald;
+	font: normal 700 30px/40px Oswald;
 	color: #eee;
 	float: left;
-	text-shadow: 2px 2px 0px rgba(0, 0, 0, .9);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 	
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Player Window Styles */
@@ -57,17 +57,73 @@ i {cursor: pointer;}
 	border-radius: 4px;
 }
 
-.playerwindow > div > div:nth-child(1) > div {background-color: #ef2c3e; border: 1px solid rgba(139, 14, 27, .8);}
-.playerwindow > div > div:nth-child(1) > div > div:nth-child(2) {border: 1px solid rgba(139, 14, 27, .9);}
+.playerwindow > div > div:nth-child(1) > div {
+	background-color: #ea4335;
+	border-left: 1px solid rgba(255, 121, 110, 1);
+	border-top: 1px solid rgba(255, 121, 110, 1);
+	border-right: 1px solid rgba(205, 48, 35, 1);
+	border-bottom: 1px solid rgba(205, 48, 35, 1);
+}
 
-.playerwindow > div > div:nth-child(2) > div {background-color: #39b54a; border: 1px solid rgba(13, 108, 41, .8);}
-.playerwindow > div > div:nth-child(2) > div > div:nth-child(2) {border: 1px solid rgba(13, 108, 41, .9);}
+.playerwindow > div > div:nth-child(1) > div > div:nth-child(2) {
+	border-right: 1px solid rgba(255, 121, 110, 1);
+	border-bottom: 1px solid rgba(255, 121, 110, 1);
+	border-left: 1px solid rgba(205, 48, 35, 1);
+	border-top: 1px solid rgba(205, 48, 35, 1);
+}
 
-.playerwindow > div > div:nth-child(3) > div {background-color: #0076a3; border: 1px solid rgba(0, 70, 100, .8);}
-.playerwindow > div > div:nth-child(3) > div > div:nth-child(2) {border: 1px solid rgba(0, 70, 100, .9);}
 
-.playerwindow > div > div:nth-child(4) > div {background-color: #713991; border: 1px solid rgba(66, 20, 87, .8);}
-.playerwindow > div > div:nth-child(4) > div > div:nth-child(2) {border: 1px solid rgba(66, 20, 87, .9);}
+.playerwindow > div > div:nth-child(2) > div {
+	background-color: #34a853;
+	border-left: 1px solid rgba(73, 205, 108, 1);
+	border-top: 1px solid rgba(73, 205, 108, 1);
+	border-right: 1px solid rgba(28, 147, 60, 1);
+	border-bottom: 1px solid rgba(28, 147, 60, 1);
+}
+
+.playerwindow > div > div:nth-child(2) > div > div:nth-child(2) {
+	border-right: 1px solid rgba(73, 205, 108, 1);
+	border-bottom: 1px solid rgba(73, 205, 108, 1);
+	border-left: 1px solid rgba(28, 147, 60, 1);
+	border-top: 1px solid rgba(28, 147, 60, 1);
+}
+
+.playerwindow > div > div:nth-child(3) > div {
+	background-color: #4285f4;
+	border-left: 1px solid rgba(149, 189, 255, 1);
+	border-top: 1px solid rgba(149, 189, 255, 1);
+	border-right: 1px solid rgba(56, 117, 217, 1);
+	border-bottom: 1px solid rgba(56, 117, 217, 1);
+}
+
+.playerwindow > div > div:nth-child(3) > div > div:nth-child(2) {
+	border-right: 1px solid rgba(149, 189, 255, 1);
+	border-bottom: 1px solid rgba(149, 189, 255, 1);
+	border-left: 1px solid rgba(56, 117, 217, 1);
+	border-top: 1px solid rgba(56, 117, 217, 1);
+}
+
+.playerwindow > div > div:nth-child(4) > div {
+	background-color: #fbbc05;
+	border-left: 1px solid rgba(255, 213, 93, 1);
+	border-top: 1px solid rgba(255, 213, 93, 1);
+	border-right: 1px solid rgba(233, 175, 33, 1);
+	border-bottom: 1px solid rgba(233, 175, 33, 1);
+}
+
+.playerwindow > div > div:nth-child(4) > div > div:nth-child(2) {
+	border-right: 1px solid rgba(255, 213, 93, 1);
+	border-bottom: 1px solid rgba(255, 213, 93, 1);
+	border-left: 1px solid rgba(233, 175, 33, 1);
+	border-top: 1px solid rgba(233, 175, 33, 1);
+}
+
+
+
+
+
+
+
 
 .playerselectupper {height: 25px;}	
 
@@ -88,7 +144,7 @@ i {cursor: pointer;}
 	float:right;
 	color:#eee;
 	background-color: rgba(0,0,0,0);
-	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 	z-index:4;
 }
 
@@ -103,7 +159,7 @@ i {cursor: pointer;}
 	float:right;
 	color:#eee;
 	background-color: rgba(0,0,0,0);
-	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 	z-index:4;
 }
 
@@ -113,7 +169,7 @@ i {cursor: pointer;}
 	font: normal 700 22px/25px Oswald;
 	color: #eee;
 	float:left;
-	text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .playerimg {
@@ -122,8 +178,8 @@ i {cursor: pointer;}
 	right: 10px;
 	top:1px;
 	z-index:3;
-	-webkit-filter: drop-shadow(3px 0px 0px rgba(0,0,0,0.2));
-	filter: drop-shadow(3px 0px 0px rgba(0,0,0,0.2));
+	-webkit-filter: drop-shadow(2px 0px 1px rgba(0,0,0,0.2));
+	filter: drop-shadow(2px 0px 1px rgba(0,0,0,0.2));
 }
 
 .playerselectlower {
@@ -263,8 +319,11 @@ i {cursor: pointer;}
 	position: relative;
 	padding: 4px;
 	border-radius: 4px;
-	background-color: #2d2d2d;
-	border: 1px solid rgba(0, 0, 0, 1);
+	background-color: #383838;
+	border-left: 1px solid rgba(150, 150, 150, 1);
+	border-top: 1px solid rgba(150, 150, 150, 1);
+	border-right: 1px solid rgba(0, 0, 0, 1);
+	border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 	
 .graphupper {height:25px;}	
@@ -281,12 +340,12 @@ i {cursor: pointer;}
 	background-color: rgba(0,0,0,0);
 	padding: 0px;
 	z-index:7;
-	text-shadow: 2px 2px 0px rgba(0, 0, 0, .9);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 	cursor: pointer;
 }	
 	
 	.timeselector > option {
-		color: #2d2d2d;
+		color: #383838;
 		font: normal 400 12px Open Sans;
 	}
 	
@@ -302,7 +361,7 @@ i {cursor: pointer;}
 	color:#eee;
 	z-index:6;
 	background-color: rgba(0,0,0,0);
-	text-shadow: 2px 2px 0px rgba(0, 0, 0, .9);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .graphlower {
@@ -311,7 +370,10 @@ i {cursor: pointer;}
 	border-radius: 4px;
 	background-color: #eeeeee;
 	margin: 4px 0 0 0;
-	border: 1px solid rgba(0, 0, 0, 1);
+	border-right: 1px solid rgba(150, 150, 150, 1);
+	border-bottom: 1px solid rgba(150, 150, 150, 1);
+	border-left: 1px solid rgba(0, 0, 0, 1);
+	border-top: 1px solid rgba(0, 0, 0, 1);
 }
 	
 .tickLabel {
@@ -323,7 +385,6 @@ i {cursor: pointer;}
 }
 
 .tooltip {
-	box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.8);
 	z-index: 15;
 }
 	
@@ -334,17 +395,17 @@ i {cursor: pointer;}
 }
 	
 	.tooltip_left > p:nth-child(1) {
-		font: normal 700 18px/18px Oswald;
+		font: normal 700 18px/17px Oswald;
 		text-align: center;
 		color: #FFF;
-		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.55);
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 	}	
 		
 	.tooltip_left > p:nth-child(2) {
 		text-align: center;
-		font: normal 700 12px/16px Oswald;
+		font: normal 700 12px/15px Oswald;
 		color: #FFF;
-		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.55);
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 	}	
 	
 .tooltip_right {
@@ -352,10 +413,10 @@ i {cursor: pointer;}
 	background-color: white;
 	border-radius: 6px;
 	float: left;
-	padding: 4px;
+	padding: 2px 4px 2px 4px;
 	text-align: center;
 	color: #000;
-	font: normal 400 12px/15px Open Sans;
+	font: normal 400 12px/14px Open Sans;
 }
 	
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Grid System Skeleton*/
@@ -432,17 +493,15 @@ i {cursor: pointer;}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Media Query Sizing */
 
 
-@media only screen and (min-width: 33.75rem){
-  .graphlower {height:500px;}
+@media only screen and (max-width: 33.75rem){
+  .playerselectlower {display: none;}
 	
 }
 
-@media only screen and (max-width: 33.75rem){
-  .playerselectlower {display: none;}
+
+@media only screen and (min-width: 65rem){
+  .graphlower {height:500px;}
 }
-
-
-
 
 .pspbackground > div > div {
 	float: none;
@@ -483,7 +542,8 @@ i {cursor: pointer;}
 
 .tt-suggestion {
 	padding: 3px 20px;
-	font: normal 400 12px/24px Open Sans;
+	height: 45px;
+	font: normal 400 14px/40px Open Sans;
 }
 
 	.tt-suggestion.tt-cursor {

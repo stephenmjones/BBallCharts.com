@@ -205,7 +205,7 @@ function createPlayerObject(obj) {
 //========================================================================= Graph Functions |
 //==========================================================================================
 
-function showChartTooltip(x, y, color, contents) {
+function showChartTooltip(x, y, color, borderlight, borderdark, contents) {
 	console.log("Displaying Tooltip.");
 	console.log(x);
 		
@@ -219,11 +219,21 @@ function showChartTooltip(x, y, color, contents) {
 			'font-size': 12,
 			'border-radius': 8,
 			'background-color': color,
+			'border-top': borderlight,
+			'border-left': borderlight,
+			'border-bottom': borderdark,
+			'border-right': borderdark,
 			padding: 2
 		}).appendTo("body");
 		$('.tooltip').css( {
 			left: x - ($('.tooltip').width()+10),
 			display: 'block'
+		});
+		$('.tooltip_right').css( {
+			'border-bottom': borderlight,
+			'border-right': borderlight,
+			'border-top': borderdark,
+			'border-left': borderdark,
 		});
 	}
 	else {
@@ -235,8 +245,18 @@ function showChartTooltip(x, y, color, contents) {
 			'font-size': 12,
 			'border-radius': 8,
 			'background-color': color,
+			'border-top': borderlight,
+			'border-left': borderlight,
+			'border-bottom': borderdark,
+			'border-right': borderdark,
 			padding: 2
-		}).appendTo("body").fadeIn(200);
+		}).appendTo("body");
+		$('.tooltip_right').css( {
+			'border-bottom': borderlight,
+			'border-right': borderlight,
+			'border-top': borderdark,
+			'border-left': borderdark,
+		});
 	};
 };
 
@@ -294,7 +314,9 @@ function plotData()	{
 	if ($('.playerwindow').children('div').children('div:nth-child(4)').children('div').children('div').children('.revert').length != 0)	{
 		var fourthObjName = $('.playerwindow').children('div').children('div:nth-child(4)').children('div').children('div').children('h2').text().replace(/\s+/g, '')+'Obj';
 		var selectedStat = $('.playerwindow').children('div').children('div:nth-child(4)').children('div').children('div').children('.statselector').val();
-		window[fourthObjName][selectedStat].color = "#713991";
+		window[fourthObjName][selectedStat].color = "#fbbc05";
+		window[fourthObjName][selectedStat].borderlight = "1px solid rgba(255, 213, 93, 1)";
+		window[fourthObjName][selectedStat].borderdark = "1px solid rgba(233, 175, 33, 1)";
 		window[fourthObjName][selectedStat].data = window[fourthObjName][selectedStat].data2.slice(0);
 		window[fourthObjName][selectedStat].label = window[fourthObjName][selectedStat].label2.slice(0);
 		console.log(window[fourthObjName][selectedStat].data);
@@ -324,7 +346,9 @@ function plotData()	{
 	if ($('.playerwindow').children('div').children('div:nth-child(3)').children('div').children('div').children('.revert').length != 0) {
 		var thirdObjName = $('.playerwindow').children('div').children('div:nth-child(3)').children('div').children('div').children('h2').text().replace(/\s+/g, '')+'Obj';
 		var selectedStat = $('.playerwindow').children('div').children('div:nth-child(3)').children('div').children('div').children('.statselector').val();
-		window[thirdObjName][selectedStat].color = "#0076a3";
+		window[thirdObjName][selectedStat].color = "#4285f4";
+		window[thirdObjName][selectedStat].borderlight = "1px solid rgba(149, 189, 255, 1)";
+		window[thirdObjName][selectedStat].borderdark = "1px solid rgba(56, 117, 217, 1)";
 		window[thirdObjName][selectedStat].data = window[thirdObjName][selectedStat].data2.slice(0);
 		window[thirdObjName][selectedStat].label = window[thirdObjName][selectedStat].label2.slice(0);
 		for (i = window[thirdObjName][selectedStat].data.length; i--;) {
@@ -351,7 +375,9 @@ function plotData()	{
 	if ($('.playerwindow').children('div').children('div:nth-child(2)').children('div').children('div').children('.revert').length != 0) {
 		var secondObjName = $('.playerwindow').children('div').children('div:nth-child(2)').children('div').children('div').children('h2').text().replace(/\s+/g, '')+'Obj';
 		var selectedStat = $('.playerwindow').children('div').children('div:nth-child(2)').children('div').children('div').children('.statselector').val();
-		window[secondObjName][selectedStat].color = "#39b54a";
+		window[secondObjName][selectedStat].color = "#34a853";
+		window[secondObjName][selectedStat].borderlight = "1px solid rgba(73, 205, 108, 1)";
+		window[secondObjName][selectedStat].borderdark = "1px solid rgba(28, 147, 60, 1)";
 		window[secondObjName][selectedStat].data = window[secondObjName][selectedStat].data2.slice(0);
 		window[secondObjName][selectedStat].label = window[secondObjName][selectedStat].label2.slice(0);
 		for (i = window[secondObjName][selectedStat].data.length; i--;) {
@@ -377,8 +403,10 @@ function plotData()	{
 	if ($('.playerwindow').children('div').children('div:nth-child(1)').children('div').children('div').children('.revert').length != 0) {
 		var firstObjName = $('.playerwindow').children('div').children('div:nth-child(1)').children('div').children('div').children('h2').text().replace(/\s+/g, '')+'Obj';
 		var selectedStat = $('.playerwindow').children('div').children('div:nth-child(1)').children('div').children('div').children('.statselector').val();
-		window[firstObjName][selectedStat].color = "#ef2c3e";
-		window[firstObjName][selectedStat].data = window[firstObjName][selectedStat].data2.slice(0);
+		window[firstObjName][selectedStat].color = "#ea4335";
+		window[firstObjName][selectedStat].borderlight = "1px solid rgba(255, 121, 110, 1)";
+		window[firstObjName][selectedStat].borderdark = "1px solid rgba(205, 48, 35, 1)";
+				window[firstObjName][selectedStat].data = window[firstObjName][selectedStat].data2.slice(0);
 		window[firstObjName][selectedStat].label = window[firstObjName][selectedStat].label2.slice(0);
 		for (i = window[firstObjName][selectedStat].data.length; i--;) {
 			if (window[firstObjName][selectedStat].data[i][0] <= Date.UTC(2015, 3, 15) - $('.timeselector').val()) { 
@@ -419,7 +447,7 @@ function plotData()	{
 			$(".tooltip").remove();
 			var x = item.datapoint[0].toFixed(2),
 			y = item.datapoint[1];
-			showChartTooltip(item.pageX, item.pageY, item.series.color, "<div class='tooltip_left'><p>"+y+"</p><p>"+item.series.term+"</p></div><div class='tooltip_right'><p>"+item.series.name+"</p><p>"+getFormattedDate(Math.round(x))+" vs. "+ item.series.label[item.dataIndex] + "</p></div>");
+			showChartTooltip(item.pageX, item.pageY, item.series.color, item.series.borderlight, item.series.borderdark, "<div class='tooltip_left'><p>"+y+"</p><p>"+item.series.term+"</p></div><div class='tooltip_right'><p>"+item.series.name+"</p><p>"+getFormattedDate(Math.round(x))+" vs. "+ item.series.label[item.dataIndex] + "</p></div>");
 		}
 		else {
 			$(".tooltip").remove();
