@@ -1,0 +1,31 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+html {
+	font-family: "helvetica neue",helvetica,arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+header {
+	height: 40px;
+	padding: 10px;
+	background-color: #525252;
+}
+
+#controller {
+	background-color: #EEE;
+	padding: 10px;
+ }
+
+#view {
+	background-color: #EEEEEE;
+}
+
+#view > div {
+	width: 600px;
+	height: 400px;
+	margin: 10px;
+	background-color: #FFF;
+}
