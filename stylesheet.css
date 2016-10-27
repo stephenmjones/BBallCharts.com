@@ -40,7 +40,6 @@ i {
 	top: 6px;
 	height: 28px;
 	float: left;
-	background-color: none;
 	-webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
 	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
 }
@@ -64,62 +63,43 @@ i {
 
 .playerwindow > div > div:nth-child(1) > div {
 	background-color: #ea4335;
-	border-left: 1px solid rgba(255, 121, 110, 1);
-	border-top: 1px solid rgba(255, 121, 110, 1);
-	border-right: 1px solid rgba(205, 48, 35, 1);
-	border-bottom: 1px solid rgba(205, 48, 35, 1);
+	border: 1px solid;
+	border-color: rgba(255, 121, 110, 1) rgba(205, 48, 35, 1) rgba(205, 48, 35, 1) rgba(255, 121, 110, 1);
 }
 
 .playerwindow > div > div:nth-child(1) > div > div:nth-child(2) {
-	border-right: 1px solid rgba(255, 121, 110, 1);
-	border-bottom: 1px solid rgba(255, 121, 110, 1);
-	border-left: 1px solid rgba(205, 48, 35, 1);
-	border-top: 1px solid rgba(205, 48, 35, 1);
+	border: 1px solid;
+	border-color: rgba(205, 48, 35, 1) rgba(255, 121, 110, 1) rgba(255, 121, 110, 1) rgba(205, 48, 35, 1);
 }
 
 .playerwindow > div > div:nth-child(2) > div {
 	background-color: #34a853;
-	border-left: 1px solid rgba(73, 205, 108, 1);
-	border-top: 1px solid rgba(73, 205, 108, 1);
-	border-right: 1px solid rgba(28, 147, 60, 1);
-	border-bottom: 1px solid rgba(28, 147, 60, 1);
+	border: 1px solid;
+	border-color: rgba(73, 205, 108, 1) rgba(28, 147, 60, 1) rgba(28, 147, 60, 1) rgba(73, 205, 108, 1);
 }
 
 .playerwindow > div > div:nth-child(2) > div > div:nth-child(2) {
-	border-right: 1px solid rgba(73, 205, 108, 1);
-	border-bottom: 1px solid rgba(73, 205, 108, 1);
-	border-left: 1px solid rgba(28, 147, 60, 1);
-	border-top: 1px solid rgba(28, 147, 60, 1);
+	border-color: rgba(28, 147, 60, 1) rgba(73, 205, 108, 1) rgba(73, 205, 108, 1) rgba(28, 147, 60, 1);
 }
 
 .playerwindow > div > div:nth-child(3) > div {
 	background-color: #4285f4;
-	border-left: 1px solid rgba(149, 189, 255, 1);
-	border-top: 1px solid rgba(149, 189, 255, 1);
-	border-right: 1px solid rgba(56, 117, 217, 1);
-	border-bottom: 1px solid rgba(56, 117, 217, 1);
+	border: 1px solid;
+	border-color: rgba(149, 189, 255, 1) rgba(56, 117, 217, 1) rgba(56, 117, 217, 1) rgba(149, 189, 255, 1);
 }
 
 .playerwindow > div > div:nth-child(3) > div > div:nth-child(2) {
-	border-right: 1px solid rgba(149, 189, 255, 1);
-	border-bottom: 1px solid rgba(149, 189, 255, 1);
-	border-left: 1px solid rgba(56, 117, 217, 1);
-	border-top: 1px solid rgba(56, 117, 217, 1);
+	border-color: rgba(56, 117, 217, 1) rgba(149, 189, 255, 1) rgba(149, 189, 255, 1) rgba(56, 117, 217, 1);
 }
 
 .playerwindow > div > div:nth-child(4) > div {
 	background-color: #fbbc05;
-	border-left: 1px solid rgba(255, 213, 93, 1);
-	border-top: 1px solid rgba(255, 213, 93, 1);
-	border-right: 1px solid rgba(233, 175, 33, 1);
-	border-bottom: 1px solid rgba(233, 175, 33, 1);
+	border: 1px solid;
+	border-color: rgba(255, 213, 93, 1) rgba(233, 175, 33, 1) rgba(233, 175, 33, 1) rgba(255, 213, 93, 1);
 }
 
 .playerwindow > div > div:nth-child(4) > div > div:nth-child(2) {
-	border-right: 1px solid rgba(255, 213, 93, 1);
-	border-bottom: 1px solid rgba(255, 213, 93, 1);
-	border-left: 1px solid rgba(233, 175, 33, 1);
-	border-top: 1px solid rgba(233, 175, 33, 1);
+	border-color: rgba(233, 175, 33, 1) rgba(255, 213, 93, 1) rgba(255, 213, 93, 1) rgba(233, 175, 33, 1);
 }
 
 .playerselectupper {
@@ -222,8 +202,8 @@ i {
 
 .pspbackground {
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 	height: 100%;
 	width: 100%;
 	background-color: rgba(0, 0, 0, .85);
@@ -291,7 +271,7 @@ i {
 	line-height: 25px;
 	font-size: 25px;
 	right: 2px;
-	top: 0px;
+	top: 0;
 	float: right;
 	color: #2d2d2d;
 	background-color: rgba(0, 0, 0, 0);
@@ -320,10 +300,8 @@ i {
 	padding: 4px;
 	border-radius: 4px;
 	background-color: #383838;
-	border-left: 1px solid rgba(150, 150, 150, 1);
-	border-top: 1px solid rgba(150, 150, 150, 1);
-	border-right: 1px solid rgba(0, 0, 0, 1);
-	border-bottom: 1px solid rgba(0, 0, 0, 1);
+	border: 1px solid;
+	border-color: rgba(150, 150, 150, 1) rgba(0, 0, 0, 1) rgba(0, 0, 0, 1) rgba(150, 150, 150, 1);
 }
 
 .graphupper {
@@ -333,14 +311,13 @@ i {
 .timeselector {
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	position: absolute;
 	width: 100%;
 	position: relative;
 	font: normal 700 22px/25px Oswald;
 	color: #eee;
 	float: left;
 	background-color: rgba(0, 0, 0, 0);
-	padding: 0px;
+	padding: 0;
 	z-index: 7;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 	cursor: pointer;
@@ -372,10 +349,8 @@ i {
 	border-radius: 4px;
 	background-color: #eeeeee;
 	margin: 4px 0 0 0;
-	border-right: 1px solid rgba(150, 150, 150, 1);
-	border-bottom: 1px solid rgba(150, 150, 150, 1);
-	border-left: 1px solid rgba(0, 0, 0, 1);
-	border-top: 1px solid rgba(0, 0, 0, 1);
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 1) rgba(150, 150, 150, 1) rgba(150, 150, 150, 1) rgba(0, 0, 0, 1);
 }
 
 .tickLabel {
@@ -611,7 +586,6 @@ i {
 	margin-top: 4px;
 	padding: 4px 0;
 	background-color: #fff;
-	border: 1px solid #ccc;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
