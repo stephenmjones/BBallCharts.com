@@ -4,10 +4,10 @@ var options = {
 	series: {
 		bars: {
 			show: true,
-			barWidth:.8,
+			barWidth:.4,
 			align: "center",
 			horizontal: true,
-			lineWidth: 1,
+			lineWidth:.6,
 			fill: .75
 		}
 	},
@@ -17,7 +17,7 @@ var options = {
 	yaxis: {
 		ticks: 0,
 		min: 0,
-		max: 11
+		max: 16
 	}
 };
 
@@ -51,8 +51,8 @@ function plotPoints() {
 		return b.points - a.points;
 	});
 	var data = [];
-	for (i = 0; i < 10; i++) {
-		data.push({data: [[playerArray[i].points,10-i]], label: playerArray[i].name})
+	for (i = 0; i < 15; i++) {
+		data.push({data: [[playerArray[i].points,15-i]], label: playerArray[i].name})
 	}
 	console.log(data);
 	plot = $.plot($('#pointsgraph'), data, options);
@@ -63,8 +63,8 @@ function plotAssists() {
 		return b.assists - a.assists;
 	});
 	var data = [];
-	for (i = 0; i < 10; i++) {
-		data.push({data: [[playerArray[i].assists,10-i]], label: playerArray[i].name})
+	for (i = 0; i < 15; i++) {
+		data.push({data: [[playerArray[i].assists,15-i]], label: playerArray[i].name})
 	}
 	console.log(data);
 	plot = $.plot($('#assistsgraph'), data, options);
@@ -75,8 +75,8 @@ function plotRebounds() {
 		return b.rebounds - a.rebounds;
 	});
 	var data = [];
-	for (i = 0; i < 10; i++) {
-		data.push({data: [[playerArray[i].rebounds,10-i]], label: playerArray[i].name})
+	for (i = 0; i < 15; i++) {
+		data.push({data: [[playerArray[i].rebounds,15-i]], label: playerArray[i].name})
 	}
 	console.log(data);
 	plot = $.plot($('#reboundsgraph'), data, options);
@@ -87,8 +87,8 @@ function plotSteals() {
 		return b.steals - a.steals;
 	});
 	var data = [];
-	for (i = 0; i < 10; i++) {
-		data.push({data: [[playerArray[i].steals,10-i]], label: playerArray[i].name})
+	for (i = 0; i < 15; i++) {
+		data.push({data: [[playerArray[i].steals,15-i]], label: playerArray[i].name})
 	}
 	console.log(data);
 	plot = $.plot($('#stealsgraph'), data, options);
@@ -99,8 +99,8 @@ function plotBlocks() {
 		return b.blocks - a.blocks;
 	});
 	var data = [];
-	for (i = 0; i < 10; i++) {
-		data.push({data: [[playerArray[i].blocks,10-i]], label: playerArray[i].name})
+	for (i = 0; i < 15; i++) {
+		data.push({data: [[playerArray[i].blocks,15-i]], label: playerArray[i].name})
 	}
 	console.log(data);
 	plot = $.plot($('#blocksgraph'), data, options);
@@ -125,5 +125,15 @@ function queryData() {
 
 $(document).ready(function() {
 	queryData();
+
+	//var nameQuery = {'api_key': 'guest', 'output': 'json', 'sdql': 'U(name) @ season = 2016'};
+	//
+	//$.getJSON('http://api.sportsdatabase.com/nba/player_query.json?jsoncallback=?', nameQuery, function(result) {
+	//
+	//	for (var i = Object.keys(result.groups[0].columns[0]).length; i--;) {
+	//		result.groups[0].columns[0].sort();
+	//		$('body').append("<img src='../images/2016_17_Headshots/"+result.groups[0].columns[0][i].replace(/\s+/g, '_')+".png' class='playerimg' onerror=this.src='../images/2014_15_Headshots/No_Photo.png' alt='No Player Photo'>&nbsp;"+result.groups[0].columns[0][i]+"<br/>");
+	//	}
+	//})
 });
 
