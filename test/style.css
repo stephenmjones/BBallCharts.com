@@ -1,0 +1,224 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CSS Reset */
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Global Styles */
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: #d5d5d5;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header Styles */
+
+.header {
+	background-color: #383838;
+	height: auto;
+	width: 100%;
+	vertical-align: middle;
+	padding: .3125rem;
+	margin-bottom: .25rem;
+}
+
+.headerlogo {
+	position: relative;
+	display: inline-block;
+	height: 1.5rem;
+	vertical-align: middle;
+	-webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
+	/*background-color: pink;*/
+}
+
+.headerlogotype {
+	position: relative;
+	display: inline-block;
+	font: normal 700 1.25rem/1.875rem Oswald;
+	color: #eee;
+	vertical-align: middle;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+	/*background-color: pink;*/
+}
+
+
+.playerimg {
+	width:100%;
+}
+
+h2 {
+	float: right;
+	font: normal 700 1rem/1.25rem Oswald;
+	color: #eee;
+	text-align: right;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	background-color: pink;
+
+}
+
+#graphwindow {
+	height: 80px;
+	width: 100%;
+	background-color: white;
+}
+
+.mvpwindow {
+	background-color: white;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Grid System Skeleton*/
+
+.container {
+	padding: 0 .25rem 0 .25rem;
+}
+
+.container:before, .container:after {
+	display: table;
+	content: ' ';
+}
+
+.container:after {
+	clear: both;
+}
+
+.row {
+	width: 100%;
+	max-width: 75rem;
+	margin: 0 auto;
+}
+
+.row .row {
+	margin-left: -0.65rem;
+	margin-right: -0.65rem;
+	width: auto;
+}
+
+.row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+[class*='grid-'] {
+	float: left;
+	position: relative;
+	padding: 0.25rem;
+	width: 100%;
+}
+
+@media only screen {
+	.grid-1-s {
+		width: 8.3333333333333%;
+	}
+
+	.grid-2-s {
+		width: 16.666666666667%;
+	}
+
+	.grid-3-s {
+		width: 25%;
+	}
+
+	.grid-4-s {
+		width: 33.333333333333%;
+	}
+
+	.grid-5-s {
+		width: 41.666666666667%;
+	}
+
+	.grid-6-s {
+		width: 50%;
+	}
+
+	.grid-7-s {
+		width: 58.333333333333%;
+	}
+
+	.grid-8-s {
+		width: 66.666666666667%;
+	}
+
+	.grid-9-s {
+		width: 75%;
+	}
+
+	.grid-10-s {
+		width: 83.333333333333%;
+	}
+
+	.grid-11-s {
+		width: 91.666666666667%;
+	}
+
+	.grid-12-s {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 65rem) {
+	.grid-1-m {
+		width: 8.3333333333333%;
+	}
+
+	.grid-2-m {
+		width: 16.666666666667%;
+	}
+
+	.grid-3-m {
+		width: 25%;
+	}
+
+	.grid-4-m {
+		width: 33.333333333333%;
+	}
+
+	.grid-5-m {
+		width: 41.666666666667%;
+	}
+
+	.grid-6-m {
+		width: 50%;
+	}
+
+	.grid-7-m {
+		width: 58.333333333333%;
+	}
+
+	.grid-8-m {
+		width: 66.666666666667%;
+	}
+
+	.grid-9-m {
+		width: 75%;
+	}
+
+	.grid-10-m {
+		width: 83.333333333333%;
+	}
+
+	.grid-11-m {
+		width: 91.666666666667%;
+	}
+
+	.grid-12-m {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 33.75rem) {
+	.grid-100 {
+		width: 100%;
+	}
+}
+
