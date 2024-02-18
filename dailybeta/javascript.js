@@ -110,7 +110,7 @@ function plotBlocks() {
 
 function queryData() {
 	var apiQuery = {'api_key': 'guest', 'output': 'json', 'sdql': 'U(name), points, assists, rebounds, blocks, steals @ date = '+getQueryDate()};
-	$.getJSON('http://api.sportsdatabase.com/nba/player_query.json?jsoncallback=?', apiQuery, function(result) {
+	$.getJSON('http://sportsdatabase.com/nba/query.json?jsoncallback=?', apiQuery, function(result) {
 		for (var i = Object.keys(result.groups[0].columns[0]).length; i--;)	{
 			createPlayerObject(result.groups[0].columns[0][i],result.groups[0].columns[1][i],result.groups[0].columns[2][i],result.groups[0].columns[3][i],result.groups[0].columns[4][i],result.groups[0].columns[5][i]);
 		}

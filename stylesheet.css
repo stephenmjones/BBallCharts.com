@@ -11,22 +11,16 @@
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Global Styles */
 
-html {
-	height: 100%;
-}
+html {height: 100%;}
 
 body {
 	height: 100%;
 	background-color: #d5d5d5;
 }
 
-button {
-	cursor: pointer;
-}
+button {cursor: pointer;}
 
-i {
-	cursor: pointer;
-}
+i {cursor: pointer;}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header Styles */
 
@@ -105,9 +99,7 @@ i {
 	border-color: rgba(233, 175, 33, 1) rgba(255, 213, 93, 1) rgba(255, 213, 93, 1) rgba(233, 175, 33, 1);
 }
 
-.playerselectupper {
-	height: 25px;
-}
+.playerselectupper {height: 25px;}
 
 .playerselectupper > i:nth-child(2) {
 	right: 2px;
@@ -224,9 +216,7 @@ i {
 	border: 1px solid rgba(0, 0, 0, 1);
 }
 
-.pspupper {
-	height: 25px;
-}
+.pspupper {height: 25px;}
 
 .pspupper > i {
 	position: relative;
@@ -237,9 +227,7 @@ i {
 	float: left;
 }
 
-.pspupper > i:nth-child(1) {
-	font-size: 22px;
-}
+.pspupper > i:nth-child(1) {font-size: 22px;}
 
 .pspupper > i:nth-child(3) {
 	right: 2px;
@@ -307,9 +295,7 @@ i {
 	border-color: rgba(150, 150, 150, 1) rgba(0, 0, 0, 1) rgba(0, 0, 0, 1) rgba(150, 150, 150, 1);
 }
 
-.graphupper {
-	height: 25px;
-}
+.graphupper {height: 25px;}
 
 .timeselector {
 	-webkit-appearance: none;
@@ -364,9 +350,7 @@ i {
 	padding: 2px;
 }
 
-.tooltip {
-	z-index: 15;
-}
+.tooltip {z-index: 15;}
 
 .tooltip_left {
 	height: 100%;
@@ -401,18 +385,14 @@ i {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Grid System Skeleton*/
 
-.container {
-	padding: 0 .25rem 0 .25rem;
-}
+.container {padding: 0 .25rem 0 .25rem;}
 
 .container:before, .container:after {
 	display: table;
 	content: ' ';
 }
 
-.container:after {
-	clear: both;
-}
+.container:after {clear: both;}
 
 .row {
 	width: 100%;
@@ -440,124 +420,47 @@ i {
 }
 
 @media only screen {
-	.grid-1-s {
-		width: 8.3333333333333%;
-	}
-
-	.grid-2-s {
-		width: 16.666666666667%;
-	}
-
-	.grid-3-s {
-		width: 25%;
-	}
-
-	.grid-4-s {
-		width: 33.333333333333%;
-	}
-
-	.grid-5-s {
-		width: 41.666666666667%;
-	}
-
-	.grid-6-s {
-		width: 50%;
-	}
-
-	.grid-7-s {
-		width: 58.333333333333%;
-	}
-
-	.grid-8-s {
-		width: 66.666666666667%;
-	}
-
-	.grid-9-s {
-		width: 75%;
-	}
-
-	.grid-10-s {
-		width: 83.333333333333%;
-	}
-
-	.grid-11-s {
-		width: 91.666666666667%;
-	}
-
-	.grid-12-s {
-		width: 100%;
-	}
+	.grid-1-s {width: 8.3333333333333%;}
+	.grid-2-s {width: 16.666666666667%;}
+	.grid-3-s {width: 25%;}
+	.grid-4-s {width: 33.333333333333%;}
+	.grid-5-s {width: 41.666666666667%;}
+	.grid-6-s {width: 50%;}
+	.grid-7-s {width: 58.333333333333%;}
+	.grid-8-s {width: 66.666666666667%;}
+	.grid-9-s {width: 75%;}
+	.grid-10-s {width: 83.333333333333%;}
+	.grid-11-s {width: 91.666666666667%;}
+	.grid-12-s {width: 100%;}
 }
 
 @media only screen and (min-width: 65rem) {
-	.grid-1-m {
-		width: 8.3333333333333%;
-	}
-
-	.grid-2-m {
-		width: 16.666666666667%;
-	}
-
-	.grid-3-m {
-		width: 25%;
-	}
-
-	.grid-4-m {
-		width: 33.333333333333%;
-	}
-
-	.grid-5-m {
-		width: 41.666666666667%;
-	}
-
-	.grid-6-m {
-		width: 50%;
-	}
-
-	.grid-7-m {
-		width: 58.333333333333%;
-	}
-
-	.grid-8-m {
-		width: 66.666666666667%;
-	}
-
-	.grid-9-m {
-		width: 75%;
-	}
-
-	.grid-10-m {
-		width: 83.333333333333%;
-	}
-
-	.grid-11-m {
-		width: 91.666666666667%;
-	}
-
-	.grid-12-m {
-		width: 100%;
-	}
+	.grid-1-m {width: 8.3333333333333%;}
+	.grid-2-m {width: 16.666666666667%;}
+	.grid-3-m {width: 25%;}
+	.grid-4-m {width: 33.333333333333%;}
+	.grid-5-m {width: 41.666666666667%;}
+	.grid-6-m {width: 50%;}
+	.grid-7-m {width: 58.333333333333%;}
+	.grid-8-m {width: 66.666666666667%;}
+	.grid-9-m {width: 75%;}
+	.grid-10-m {width: 83.333333333333%;}
+	.grid-11-m {width: 91.666666666667%;}
+	.grid-12-m {width: 100%;}
 }
 
 @media only screen and (max-width: 33.75rem) {
-	.grid-100 {
-		width: 100%;
-	}
+	.grid-100 {width: 100%;}
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Media Query Sizing */
 
 @media only screen and (max-width: 33.75rem) {
-	.playerselectlower {
-		display: none;
-	}
-
+	.playerselectlower {display: none;}
 }
 
 @media only screen and (min-width: 65rem) {
-	.graphlower {
-		height: 500px;
-	}
+	.graphlower {height: 500px;}
 }
 
 .pspbackground > div > div {
@@ -580,9 +483,7 @@ i {
 	font: normal 400 12px Open Sans;
 }
 
-.twitter-typeahead {
-	width: 100%;
-}
+.twitter-typeahead {width: 100%;}
 
 .tt-menu {
 	width: 100%;
@@ -609,15 +510,11 @@ i {
 	background-color: #333;
 }
 
-.tt-suggestion:nth-child(even) {
-	background-color: #eee;
-}
+.tt-suggestion:nth-child(even) {background-color: #eee;}
 
 .tt-suggestion.tt-cursor:nth-child(even) {
 	color: #fff;
 	background-color: #333;
 }
 
-.tt-suggestion p {
-	margin: 0;
-}
+.tt-suggestion p {margin: 0;}
